@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+  <meta charset="UTF-8">
+  <title>Deprem Afeti</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+
+    .arkaplan {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('img/sel-arka.jpg'); 
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      filter: blur(2px);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgb(142, 22, 22);
+      color: white;
+      padding: 15px 30px;
+      font-size: 28px;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: rgb(142, 22, 22);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    
+    .kutucuk {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .kutucuk h3 {
+      color: rgb(142, 22, 22);
+    }
+
+    .kutucuk a {
+      color: rgb(142, 22, 22);
+      text-decoration: none;
+    }
+
+    .kutucuk a:hover {
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .tip {
+      background-color: #ffe9e9;
+      padding: 10px 15px;
+      border-left: 5px solid #c52b2b;
+      margin-top: 15px;
+      border-radius: 6px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: rgb(142, 22, 22);
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #a61717;
+    }
+
+    .afet-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Deprem Afeti Yardım Bilgilendirmesi
+</header>
+<div style="position: absolute; top: 20px; right: 20px;">
+  <a href="AFBİLKO.php" style="background-color: rgb(142, 22, 22); color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">Ana Sayfa</a>
+</div>
+
+<main>
+  <section>
+    <h2>Deprem Nedir?</h2>
+   <div style="text-align: center; margin: 20px 0;">
+    <img src="Görseller/deprem_gorseli3.jpg" height="250" width="500" alt="Deprem Görseli">
+   </div>
+   <p>Deprem, yer kabuğundaki fay hatlarında meydana gelen ani kırılmalar sonucu oluşan titreşimlerdir. Yüzeyde sarsıntı olarak hissedilir ve can/mal kaybına neden olabilir.</p>
+    
+     <p><strong>📌 Türkiye, fay hatları üzerinde bulunduğu için deprem riski yüksek bir ülkedir.</strong></p>
+  </section>
+
+  <section>
+    <h2>Deprem Öncesinde Ne Yapmalıyım?</h2>
+    <ul>
+      <li>Acil durum çantası hazırlayın (su, ilk yardım, el feneri, yedek kıyafet, düdük vs.).</li>
+      <li>Evinizdeki ağır eşyaları duvara sabitleyin.</li>
+      <li>Toplanma alanınızı önceden öğrenin ve ailenizle buluşma planı yapın.</li>
+      <li>Gaz, su ve elektriğin nasıl kapatılacağını öğrenin.</li>
+    </ul>
+    <div class="kutucuk">📌 Acil bir durumda hızlı ve doğru kararlar almak için önceden hazırlıklı olun.</div>
+  </section>
+
+  <section>
+    <h2>Deprem Anında Ne Yapmalıyım?</h2>
+    <ul>
+      <li><strong>🏠 İçerideyseniz:</strong> "Çök – Kapan – Tutun" yöntemini uygulayın. Sabit ve sağlam bir eşyanın yanına çökerek korunmaya çalışın.
+      <li><strong>🚗 Araçtaysanız:</strong> Aracı durdurun, içeride bekleyin. Köprü, tünel altından uzak durun.
+      <li><strong>🌳 Açık alandaysanız:</strong> Ağaç, bina, elektrik direği gibi nesnelerden uzak durun.</strong>
+    </ul>
+    <div class="kutucuk">📵 Asansör kullanmayın, camlardan uzak durun.</div>
+  </section>
+
+  <section>
+    <h2>Deprem Sonrasında Ne Yapmalıyım?</h2>
+    <ol>
+      <li>Sakin olun ve panik yapmayın.</li>
+      <li>Gaz sızıntısı riskine karşı elektrik düğmelerine basmayın, kibrit çakmayın.</li>
+      <li>Binanızda hasar varsa derhal terk edin, toplanma alanına gidin.</li>
+      <li>Radyo ve yetkililerin duyurularını takip edin.</li>
+    </ol>
+    <div class="kutucuk">📍 En yakın <strong>toplanma alanı</strong> bilgisine <a href="toplanma_alanlari.html" target="_blank"><strong>Toplanma Alanları</strong></a> sayfasından ulaşabilirsiniz.</div>
+  </section>
+
+  <section>
+    <h2>Afetzedeler İçin Öneriler</h2>
+    <ul>
+      <li>Yaralı iseniz yardım isteyin veya düdük, ses gibi sinyallerle konumunuzu belli edin.</li>
+      <li>Yetkililere doğru bilgi vererek yardım sürecine destek olun.</li>
+      <li>Psikolojik destek alın, yalnız olmadığınızı unutmayın.</li>
+    </ul>
+    <div class="kutucuk">🧠 Depremin ardından travma normaldir. Gerekirse bir uzmandan psikolojik destek alın.</div>
+  </section>
+ </ul>
+    </div>
+
+</main>
+
+</body>
+</html>

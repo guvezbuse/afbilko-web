@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Yangın Afeti</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+
+    .arkaplan {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('img/yangin-arka.jpg'); 
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;
+      filter: blur(2px);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgb(142, 22, 22);
+      color: white;
+      padding: 15px 30px;
+      font-size: 28px;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: rgb(142, 22, 22);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .yardim {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .yardim h3 {
+      color: rgb(142, 22, 22);
+    }
+
+    .yardim a {
+      color: rgb(142, 22, 22);
+      text-decoration: none;
+    }
+
+    .yardim a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="arkaplan"></div>
+
+  <header>Yangın Afeti Yardım Bilgilendirmesi</header>
+  <div style="position: absolute; top: 20px; right: 20px;">
+  <a href="AFBİLKO.php" style="background-color: rgb(142, 22, 22); color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">Ana Sayfa</a>
+</div>
+
+  <main>
+    <h2>Yangın Afeti Nedir?</h2>
+    <div style="text-align: center;">
+  <img src="Görseller/yangin_gorseli.jpg" height="250" width="500" alt="Yangın Görseli">
+</div>
+    <p>Yangın, kontrolsüz bir şekilde yayılan ateşin çevresindeki tüm canlılara ve eşyalarına zarar vermesi durumudur. Evlerde, ormanlarda, işyerlerinde veya doğal alanlarda yangınlar meydana gelebilir ve büyük zararlara yol açabilir.</p>
+
+    <p><strong>📌 Yangınlar, genellikle elektriksel arızalar, yıldırım düşmesi, insanların dikkatsizliği ve doğal afetler sonucu çıkabilir.</strong></p>
+
+    <h2>Yangın Öncesinde Ne Yapmalıyım?</h2>
+    <p>Yangın öncesi yapılacak hazırlıklar, can güvenliğini sağlamak ve yangının etkilerini azaltmak için çok önemlidir:</p>
+    <div class="yardim">
+      <h3>Alınması Gereken Önlemler:</h3>
+      <ul>
+        <li><strong>Acil durum planı hazırlayın:</strong> Yangın anında yapılacakları belirleyin, bir yangın tatbikatı yapın.</li>
+        <li><strong>Yangın söndürme ekipmanları edinin:</strong> Evde yangın söndürücü bulundurun, yangın merdiveni ve çıkış noktalarınızı kontrol edin.</li>
+        <li><strong>Elektrik sistemlerini kontrol edin:</strong> Elektrik sistemini düzenli olarak kontrol ettirerek, kısa devre riskini en aza indirin.</li>
+        <li><strong>Aile bireylerinizi bilgilendirin:</strong> Yangın durumunda her bireyin ne yapması gerektiğini öğrenmesini sağlayın.</li>
+        <li><strong>Yangın tahliye yollarını belirleyin:</strong> Evde yangın tahliye yollarını ve çıkış noktalarını önceden belirleyin.</li>
+      </ul>
+    </div>
+
+    <h2>Yangın Anında Ne Yapmalıyım?</h2>
+    <p>Yangın anında panik yapmadan ve doğru adımları izleyerek, can güvenliğini sağlamak çok önemlidir:</p>
+    <div class="yardim">
+      <h3>Yangın Anında Yapmanız Gerekenler:</h3>
+      <ul>
+        <li><strong>İçerideyseniz:</strong> Yangın var ise hemen evden dışarı çıkın, kapıları kapalı bırakın, yangından uzaklaşın.</li>
+        <li><strong>Yangın merdivenini kullanın:</strong> Yangın durumunda asansör kullanmayın. En yakın yangın merdivenini kullanarak binayı terk edin.</li>
+        <li><strong>Yangını söndürmeye çalışmayın:</strong> Yangın çok büyükse, itfaiyeye haber verin ve binayı terk edin.</li>
+        <li><strong>Odadaki dumanı engellemek için:</strong> Kapı altını bezle kapatın ve yavaşça odadan çıkın.</li>
+      </ul>
+    </div>
+
+    <h2>Yangın Sonrasında Ne Yapmalıyım?</h2>
+    <p>Yangın sonrasında, hem psikolojik hem de fiziksel olarak sağlığınızı korumak önemlidir:</p>
+    <div class="yardim">
+      <h3>Yangın Sonrası Yapmanız Gerekenler:</h3>
+      <ul>
+        <li><strong>Panik yapmayın:</strong> Sakin kalın ve yangın sonrası yapılması gerekenleri doğru şekilde yerine getirin.</li>
+        <li><strong>Yangın alanından uzaklaşın:</strong> Yangın sonrasında hala duman ya da tehlike olabilir. Güvenli bir alana gidin.</li>
+        <li><strong>Yaralıları kontrol edin:</strong> Eğer birisi yaralanmışsa, ilk yardım uygulayın ve hastaneye sevk edin.</li>
+        <li><strong>Yetkililere haber verin:</strong> Yangın sonrası durum hakkında yerel yetkililere bilgi verin.</li>
+      </ul>
+    </div>
+
+    <h2>Afetzedeler İçin Öneriler</h2>
+    <p>Yangın sonrası, afetzedelerin güvenliği ve sağlığı için yapılması gereken bazı önemli adımlar şunlardır:</p>
+    <div class="yardim">
+      <h3>Yangın Sonrası Afetzedeler İçin Öneriler:</h3>
+      <ul>
+        <li><strong>Yaralıysanız:</strong> Yardım talep edin veya acil servise başvurun.</li>
+        <li><strong>Psikolojik destek alın:</strong> Yangın sonrasında stres, korku ve travma normaldir. Bir psikolog veya danışman ile görüşebilirsiniz.</li>
+        <li><strong>Yaralıları taşımak için yardım isteyin:</strong> En yakın acil yardım hattına ulaşın.</li>
+        <li><strong>En yakın toplanma alanına gidin:</strong> Yangın sonrasında, güvenli alana geçmek için en yakın toplanma alanına gidin.</li>
+      </ul>
+    </div>
+
+    <div class="yardim">
+      <h3>Yardım Almak İçin:</h3>
+      <ul>
+        <li><a href="yardim_talep_formu.php">Yardım Talep Formu</a> sayfasını doldurun.</li>
+        <li><a href="toplanma_alanlari.html" target="_blank">Toplanma Alanları</a> Alanları sayfasından en yakın toplanma alanını öğrenin.</li>
+        <li>Acil durumlarda yardım hatlarına başvurun ve en yakın yerel yetkililere ulaşın.</li>
+      </ul>
+    </div>
+
+  </main>
+
+</body>
+</html>

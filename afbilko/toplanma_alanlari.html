@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toplanma Alanları</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgb(142, 22, 22);
+      color: white;
+      padding: 15px 30px;
+      font-size: 28px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    #map {
+      width: 75%;
+      height: 650px;
+    }
+
+    .address-list {
+      width: 28%;
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .address-list h3 {
+      color: rgb(142, 22, 22);
+     margin-top: 0.2px;
+    }
+
+    .address-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .address-list li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .affect-type {
+      font-weight: bold;
+      margin-top: 20px;
+      color: rgb(142, 22, 22);
+    }
+
+    .affect-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    .top-right-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+    .top-right-button a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .top-right-button a:hover {
+      background-color: #a61717;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>Toplanma Alanları</header>
+<div style="position: absolute; top: 20px; right: 20px;">
+  <a href="AFBİLKO.php" style="background-color: rgb(142, 22, 22); color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;">Ana Sayfa</a>
+</div>
+
+<div class="container">
+  
+  <div id="map"></div>
+
+  <div class="address-list">
+    <h3>Toplanma Alanları</h3>
+
+    <div class="affect-type">Deprem İçin Toplanma Alanları</div>
+    <ul>
+      <li><img class="affect-icon" src="Görseller/deprem_ikonu.jpeg" alt="Deprem İkonu"> İstanbul: Küçükçekmece - Atakent Mahallesi</li>
+      <li><img class="affect-icon" src="Görseller/deprem_ikonu.jpeg" alt="Deprem İkonu"> İstanbul: Pendik - Kurtköy Meydanı</li>
+      <li><img class="affect-icon" src="Görseller/deprem_ikonu.jpeg" alt="Deprem İkonu"> İstanbul: Bakırköy - Ataköy Marina</li>
+    </ul>
+  
+    <div class="affect-type">Yangın İçin Toplanma Alanları</div>
+    <ul>
+      <li><img class="affect-icon" src="Görseller/yangın_ikonu.jpg" alt="Yangın İkonu"> İstanbul: Taksim Meydanı</li>
+      <li><img class="affect-icon" src="Görseller/yangın_ikonu.jpg" alt="Yangın İkonu"> İstanbul: Emin Ali Paşa Mahallesi</li>
+      <li><img class="affect-icon" src="Görseller/yangın_ikonu.jpg" alt="Yangın İkonu"> İstanbul: Maltepe Parkı</li>
+    </ul>
+
+    <div class="affect-type">Sel İçin Toplanma Alanları</div>
+    <ul>
+      <li><img class="affect-icon" src="Görseller/sel_ikonu.jpeg" alt="Sel İkonu"> İstanbul: Bağcılar - Mahmutbey Meydanı</li>
+      <li><img class="affect-icon" src="Görseller/sel_ikonu.jpeg" alt="Sel İkonu"> Ankara: Çankaya - Sıhhiye Meydanı</li>
+      <li><img class="affect-icon" src="Görseller/sel_ikonu.jpeg" alt="Sel İkonu"> İzmir: Konak - Alsancak Meydanı</li>
+    </ul>
+
+    <div class="affect-type">Heyelan İçin Toplanma Alanları</div>
+    <ul>
+      <li><img class="affect-icon" src="Görseller/heyelan_ikonu.jpeg" alt="Heyelan İkonu"> İstanbul: Beykoz - Anadolu Hisarı</li>
+      <li><img class="affect-icon" src="Görseller/heyelan_ikonu.jpeg" alt="Heyelan İkonu"> Ankara: Mamak - Mamak Meydanı</li>
+      <li><img class="affect-icon" src="Görseller/heyelan_ikonu.jpeg" alt="Heyelan İkonu"> Bartın: Bartın Merkez</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Leaflet.js ve OpenStreetMap Haritası -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+  // Harita Başlangıç Konumu
+  var map = L.map('map').setView([41.0082, 28.9784], 6); 
+
+  // OpenStreetMap Katmanını Haritaya Ekleme:
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  var locations = [
+    { name: "Küçükçekmece - Atakent Mahallesi", lat: 41.010, lng: 28.850, color: "red" },
+    { name: "Pendik - Kurtköy Meydanı", lat: 40.880, lng: 29.310, color: "red" },
+    { name: "Bakırköy - Ataköy Marina", lat: 40.979, lng: 28.864, color: "red" },
+    { name: "Taksim Meydanı", lat: 41.036, lng: 28.985, color: "orange" },
+    { name: "Emin Ali Paşa Mahallesi", lat: 41.004, lng: 28.973, color: "orange" },
+    { name: "Maltepe Parkı", lat: 40.938, lng: 29.172, color: "orange" },
+    { name: "Bağcılar - Mahmutbey Meydanı", lat: 41.004, lng: 28.879, color: "blue" },
+    { name: "Çankaya - Sıhhiye Meydanı", lat: 39.933, lng: 32.859, color: "blue" },
+{ name: "Konak - Alsancak Meydanı", lat: 38.419, lng: 27.128, color: "blue" },
+{ name: "Beykoz - Anadolu Hisarı", lat: 41.152, lng: 29.108, color: "brown" },
+{ name: "Mamak - Mamak Meydanı", lat: 39.986, lng: 32.573, color: "brown" },
+{ name: "Bartın Merkez", lat: 41.637, lng: 32.317, color: "brown" }
+];
+
+locations.forEach(function(location) {
+L.circleMarker([location.lat, location.lng], {
+color: location.color,
+radius: 8,
+fillOpacity: 0.7
+}).addTo(map)
+.bindPopup("<b>" + location.name + "</b>");
+});
+</script>
+
+</body> </html>
