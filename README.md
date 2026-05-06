@@ -37,22 +37,22 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları takip 
    <td><img src="screenshots/04.jpeg" width="350"></td>
   </tr>
   <tr>
-   <td><img src="screenshots/05.jpeg" width="220"></td>
-    <td><img src="screenshots/06.jpeg" width="220"></td>
-    <td><img src="screenshots/07.jpeg" width="220"></td>
-    <td><img src="screenshots/08.jpeg" width="220"></td>
+   <td><img src="screenshots/05.jpeg" width="350"></td>
+    <td><img src="screenshots/06.jpeg" width="350"></td>
+    <td><img src="screenshots/07.jpeg" width="350"></td>
+    <td><img src="screenshots/08.jpeg" width="350"></td>
   </tr>
  <tr>
-   <td><img src="screenshots/09.jpeg" width="220"></td>
-    <td><img src="screenshots/10.jpeg" width="220"></td>
-    <td><img src="screenshots/11.jpeg" width="220"></td>
-    <td><img src="screenshots/12.jpeg" width="220"></td>
+   <td><img src="screenshots/09.jpeg" width="350"></td>
+    <td><img src="screenshots/10.jpeg" width="350"></td>
+    <td><img src="screenshots/11.jpeg" width="350"></td>
+    <td><img src="screenshots/12.jpeg" width="350"></td>
   </tr>
  <tr>
-   <td><img src="screenshots/13.jpeg" width="220"></td>
-    <td><img src="screenshots/14.jpeg" width="220"></td>
-    <td><img src="screenshots/15.jpeg" width="220"></td>
-    <td><img src="screenshots/16.jpeg" width="220"></td>
+   <td><img src="screenshots/13.jpeg" width="350"></td>
+    <td><img src="screenshots/14.jpeg" width=350"></td>
+    <td><img src="screenshots/15.jpeg" width="350"></td>
+    <td><img src="screenshots/16.jpeg" width="350"></td>
   </tr>
  
 </table>
