@@ -1,5 +1,5 @@
 # afbilko-web
-# AFBİLKO - Afet Bilgilendirme ve Koordinasyon Sistemi (Full-Stack Web)
+# AFBİLKO - Afet Bilgilendirme ve Yardım Koordinasyon Sistemi (Full-Stack Web)
 
 AFBİLKO, afet anlarında bilgi akışını hızlandırmak, yardım taleplerini dijital ortamda toplamak ve gönüllü koordinasyonunu sağlamak amacıyla geliştirilmiş bir Full-Stack web uygulamasıdır. Bu proje, özellikle afet sonrası ilk kritik saatlerde yardımların doğru noktalara ulaşmasına yardımcı olmayı hedefler.
 Projenin özgün yönü, bireysel yardımlaşma imkanı sunmasıdır.
